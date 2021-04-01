@@ -1,0 +1,19 @@
+.header-layout {
+  grid-row: header;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__title {
+  justify-self: flex-start;
+  align-self: center;
+  margin: 10px;
+}
+
+.header__button {
+  justify-self: flex-end;
+  align-self: center;
+  margin: 10px;
+  height: 40px;
+  width: 90px;
+}
