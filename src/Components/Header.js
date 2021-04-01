@@ -7,9 +7,12 @@ function Header({ title }) {
   return (
     <header className="header-layout">
       <h2 className="header__title">{title}</h2>
-      <button className="header__button" onClick={handleClickAdd}>
-        Add ToDo's
-      </button>
+      <form className="header__form">
+        <input type="text" />
+        <button className="header__button" onClick={handleClickAdd}>
+          Add ToDo's
+        </button>
+      </form>
     </header>
   );
 }

@@ -1,0 +1,23 @@
+.main-layout {
+  grid-row: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.toDoBox {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 350px;
+  border: solid 2px black;
+}
+
+.ToDoBoxButtonsLayout {
+  display: flex;
+  gap: 3px;
+  margin-right: 3px;
+  align-self: center;
+}

@@ -1,0 +1,11 @@
+.toDoBoxDone {
+  border: solid 2px green;
+  background: white;
+  color: green;
+}
+
+.toDoBoxDelete {
+  border: solid 2px red;
+  background: white;
+  color: red;
+}
