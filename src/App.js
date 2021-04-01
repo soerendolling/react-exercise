@@ -1,12 +1,15 @@
 import "./App.css";
+// import React, { useReact } from "react";
 import Header from "./Components/Header";
 import MainContent from "./Components/MainContent";
 
-function App() {
+function App(toDoTitle) {
+  // const [toDo, setToDo] = useReact("");
+
   return (
     <div className="App">
       <Header title="My ToDos" />
-      <MainContent />
+      <MainContent toDoTitle={toDoTitle} />
     </div>
   );
 }
