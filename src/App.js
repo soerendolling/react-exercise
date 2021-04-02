@@ -19,11 +19,25 @@ function App() {
 
   function getToDo() {
     const arrayOfToDo = toDo.map((toDo) => {
-      return <MainContent toDoTitle={toDo} key={toDo} />;
+      return (
+        <MainContent
+          toDoTitle={toDo}
+          key={toDo}
+          onClickRemove={handleToDoRemove}
+        />
+      );
     });
 
     console.log(arrayOfToDo);
     return arrayOfToDo;
+  }
+
+  function handleToDoRemove(toDoTitle) {
+    const newToDo = toDo.filter((toDo) => {
+      return toDo !== toDoTitle;
+    });
+    setToDo(newToDo);
+    console.log(toDo !== newToDo);
   }
 
   return (

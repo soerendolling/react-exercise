@@ -1,16 +1,12 @@
 import "./ToDoBoxButton.css";
 
-function ToDoBoxButton({ number, toDoTitle }) {
-  function handleClickDelete() {
-    console.log(`The Task ${number} would be deleted`);
-  }
-
+function ToDoBoxButton({ handleDelete, toDoTitle }) {
   function handleClickDone() {
     return console.log(`The ${toDoTitle} is done`);
   }
   return (
     <div className="ToDoBoxButtonsLayout">
-      <button className="toDoBoxDelete" onClick={handleClickDelete}>
+      <button className="toDoBoxDelete" onClick={handleDelete}>
         Delete
       </button>
       <button className="toDoBoxDone" onClick={handleClickDone}>
