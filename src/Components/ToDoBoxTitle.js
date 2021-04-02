@@ -1,7 +1,7 @@
 import "./ToDoBoxTitle.css";
 
-function ToDoBoxTitle({ todoTitle }) {
-  return <p className="toDoTitle">{todoTitle}</p>;
+function ToDoBoxTitle({ toDoTitle }) {
+  return <p className="toDoTitle">{toDoTitle}</p>;
 }
 
 export default ToDoBoxTitle;
