@@ -63,10 +63,9 @@ function App() {
 
   function handleToDoRemove(toDoTitle) {
     const newToDo = toDo.filter((toDo) => {
-      return toDo !== toDoTitle;
+      return toDo.toDoTitle !== toDoTitle;
     });
     setToDo(newToDo);
-    console.log(toDo !== newToDo);
   }
 
   return (
