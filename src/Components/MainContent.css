@@ -21,3 +21,11 @@
   margin-right: 3px;
   align-self: center;
 }
+
+.toDo--completed {
+  background-color: green;
+}
+
+.toDo--pending {
+  background-color: yellow;
+}

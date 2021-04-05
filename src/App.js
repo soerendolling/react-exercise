@@ -6,24 +6,53 @@ import MainContent from "./Components/MainContent";
 function App() {
   const [toDo, setToDo] = useState([]);
 
-  function handleClickAdd(event) {
-    event.preventDefault();
-    const form = event.target;
-    const input = form.toDoTitle;
+  // function handleClickAdd(event) {
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   const input = form.toDoTitle;
 
-    const newToDo = [...toDo, input.value];
+  //   const newToDo = [...toDo, input.value];
+  //   setToDo(newToDo);
+
+  //   form.reset();
+  // }
+
+  function handleClickAdd(theTitle) {
+    const newToDo = [
+      ...toDo,
+      {
+        toDoTitle: theTitle,
+        isCompleted: true,
+      },
+    ];
     setToDo(newToDo);
+    console.log(newToDo);
+  }
 
-    form.reset();
+  function handleToggleComplete(toDoTitle) {
+    const newToDo = toDo.map((toDo) => {
+      console.log(toDo.title);
+      if (toDo.toDoTitle === toDoTitle) {
+        return {
+          ...toDo,
+          isCompleted: !toDo.isCompleted,
+        };
+      } else {
+        return toDo;
+      }
+    });
+    setToDo(newToDo);
   }
 
   function getToDo() {
     const arrayOfToDo = toDo.map((toDo) => {
       return (
         <MainContent
-          toDoTitle={toDo}
-          key={toDo}
+          toDoTitle={toDo.toDoTitle}
+          key={toDo.toDoTitle}
+          status={toDo.isCompleted}
           onClickRemove={handleToDoRemove}
+          onToggleComplete={handleToggleComplete}
         />
       );
     });

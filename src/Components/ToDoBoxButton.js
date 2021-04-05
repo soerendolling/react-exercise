@@ -1,16 +1,13 @@
 import "./ToDoBoxButton.css";
 
-function ToDoBoxButton({ handleDelete, toDoTitle }) {
-  function handleClickDone() {
-    return console.log(`The ${toDoTitle} is done`);
-  }
+function ToDoBoxButton({ handleDelete, handleToggleClick, isCompleted }) {
   return (
     <div className="ToDoBoxButtonsLayout">
       <button className="toDoBoxDelete" onClick={handleDelete}>
         Delete
       </button>
-      <button className="toDoBoxDone" onClick={handleClickDone}>
-        Done
+      <button className="toDoBoxDone" onClick={handleToggleClick}>
+        {isCompleted ? "Complete" : "Pending"}
       </button>
     </div>
   );
