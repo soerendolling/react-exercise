@@ -1,6 +1,7 @@
 import "./MainContent.css";
 import ToDoBoxTitle from "./ToDoBoxTitle";
 import ToDoBoxButton from "./ToDoBoxButton";
+import ToDoBoxCross from "./ToDoBoxCross";
 
 function MainContent({ toDoTitle, onClickRemove, status, onToggleComplete }) {
   function onClickDelete() {
@@ -15,9 +16,9 @@ function MainContent({ toDoTitle, onClickRemove, status, onToggleComplete }) {
 
   return (
     <div className={`toDoBox ${classForCompletion}`}>
+      <ToDoBoxCross handleDelete={onClickDelete} />
       <ToDoBoxTitle toDoTitle={toDoTitle} />
       <ToDoBoxButton
-        handleDelete={onClickDelete}
         toDoTitle={toDoTitle}
         isCompleted={status}
         handleToggleClick={toggleBox}

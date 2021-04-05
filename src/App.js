@@ -6,32 +6,19 @@ import MainContent from "./Components/MainContent";
 function App() {
   const [toDo, setToDo] = useState([]);
 
-  // function handleClickAdd(event) {
-  //   event.preventDefault();
-  //   const form = event.target;
-  //   const input = form.toDoTitle;
-
-  //   const newToDo = [...toDo, input.value];
-  //   setToDo(newToDo);
-
-  //   form.reset();
-  // }
-
   function handleClickAdd(theTitle) {
     const newToDo = [
       ...toDo,
       {
         toDoTitle: theTitle,
-        isCompleted: true,
+        isCompleted: false,
       },
     ];
     setToDo(newToDo);
-    console.log(newToDo);
   }
 
   function handleToggleComplete(toDoTitle) {
     const newToDo = toDo.map((toDo) => {
-      console.log(toDo.title);
       if (toDo.toDoTitle === toDoTitle) {
         return {
           ...toDo,
@@ -57,7 +44,6 @@ function App() {
       );
     });
 
-    console.log(arrayOfToDo);
     return arrayOfToDo;
   }
 

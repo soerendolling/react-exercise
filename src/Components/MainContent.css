@@ -13,6 +13,7 @@
   height: 50px;
   width: 350px;
   border: solid 2px black;
+  border-radius: 8px;
 }
 
 .ToDoBoxButtonsLayout {
@@ -23,9 +24,9 @@
 }
 
 .toDo--completed {
-  background-color: green;
+  background-color: lightgreen;
 }
 
 .toDo--pending {
-  background-color: yellow;
+  background-color: lightcoral;
 }

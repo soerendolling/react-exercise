@@ -1,0 +1,9 @@
+.toDoBoxDelete {
+  align-self: center;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  border-radius: 8px;
+  color: red;
+  border: solid 2px red;
+}
