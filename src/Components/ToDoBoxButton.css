@@ -1,0 +1,7 @@
+.toDoBoxDone {
+  padding: 4px;
+  border: solid 2px green;
+  border-radius: 8px;
+  background: white;
+  color: green;
+}
